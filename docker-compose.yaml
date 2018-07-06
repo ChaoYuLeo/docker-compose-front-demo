@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  front:
+    restart: always # 重启设置
+    build:
+      context: .  # 运行上下文
+      dockerfile: frontend.dockerfile # 指定dockerfile文件
+    image: ant_design_pro # 镜像名称
+    ports:
+      - 80:2443 # 将容器内部的2443端口暴露为容器外部的80端口
+
