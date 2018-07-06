@@ -11,7 +11,7 @@ RUN git clone https://github.com/kenberkeley/vue-demo.git
 # 进入项目目录
 WORKDIR /root/vue-demo
 # 安装项目依赖，打包 && 将打包好的文件拷贝到release目录
-RUN npm install && npm run build $AREA &&  cp -r ./dist /release
+RUN npm install && npm run build && cp -r ./dist /release
 
 
 # 拉取nginx镜像，这里用的alpine是一个精简的linux系统
