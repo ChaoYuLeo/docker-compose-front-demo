@@ -6,10 +6,10 @@ RUN git config --global http.sslVerify false
 RUN npm config set registry http://registry.npm.taobao.org/
 # 进入root目录
 WORKDIR /root
-# 克隆前端项目（这里以vue2-happyfri项目为例）
-RUN git clone https://github.com/bailicangdu/vue2-happyfri.git
+# 克隆前端项目（这里以VueDemo_Sell_Eleme项目为例）
+RUN git clone https://github.com/SimonZhangITer/VueDemo_Sell_Eleme.git
 # 进入项目目录
-WORKDIR /root/vue2-happyfri
+WORKDIR /root/VueDemo_Sell_Eleme
 # 安装项目依赖，打包 && 将打包好的文件拷贝到release目录
 RUN npm install && npm run build && cp -r ./dist /release
 
